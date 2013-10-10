@@ -1,0 +1,138 @@
+/*
+
+Copyright (c) 2011, alexandre delattre
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+ * Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+ * Neither the name of grafyweb.com nor the names of its contributors may
+   be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+ */
+
+.Formbuilder_icon_button{
+    background: url(/plugins/Zendformbuilder/static/img/button.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_captcha{
+    background: url(/plugins/Zendformbuilder/static/img/captcha.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_checkbox{
+    background: url(/plugins/Zendformbuilder/static/img/checkbox.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_file{
+    background: url(/plugins/Zendformbuilder/static/img/file.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_hash{
+    background: url(/plugins/Zendformbuilder/static/img/Hash.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_hidden{
+    background: url(/plugins/Zendformbuilder/static/img/hidden.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_image{
+    background: url(/plugins/Zendformbuilder/static/img/picture.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_multiCheckbox{
+    background: url(/plugins/Zendformbuilder/static/img/multicheckbox.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_multiselect{
+    background: url(/plugins/Zendformbuilder/static/img/multiselect.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_password{
+    background: url(/plugins/Zendformbuilder/static/img/password.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_radio{
+    background: url(/plugins/Zendformbuilder/static/img/radio.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_reset{
+    background: url(/plugins/Zendformbuilder/static/img/reset.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_select{
+    background: url(/plugins/Zendformbuilder/static/img/select.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_submit{
+    background: url(/plugins/Zendformbuilder/static/img/submit.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_text{
+    background: url(/plugins/Zendformbuilder/static/img/textfield.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_textarea{
+    background: url(/plugins/Zendformbuilder/static/img/textarea.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_filter{
+    background: url(/plugins/Zendformbuilder/static/img/Filter.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_validator{
+    background: url(/plugins/Zendformbuilder/static/img/bool.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_root{
+    background: url(/plugins/Zendformbuilder/static/img/application_form.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_fbuilder{
+    background: url(/plugins/Zendformbuilder/static/img/formBuilder.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_filter_add{
+    background: url(/plugins/Zendformbuilder/static/img/Filter_add.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_validator_add{
+    background: url(/plugins/Zendformbuilder/static/img/bool_add.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_item_add{
+    background: url(/plugins/Zendformbuilder/static/img/elem_add.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_root_add{
+    background: url(/plugins/Zendformbuilder/static/img/application_form_add.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_displayGroup{
+    background: url(/plugins/Zendformbuilder/static/img/fieldset.png) left center no-repeat !important;
+}
+
+.Formbuilder_icon_displayGroup_add{
+    background: url(/plugins/Zendformbuilder/static/img/fieldset_add.png) left center no-repeat !important;
+}
+
+.pimcore_icon_api{
+    background: url(/plugins/Zendformbuilder/static/img/help.png) left center no-repeat !important;
+}
