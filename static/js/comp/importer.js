@@ -30,6 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
  */
 
 pimcore.registerNS("Formbuilder.comp.importer");
+
 Formbuilder.comp.importer = Class.create({
 
    initialize: function (parentPanel) {
@@ -41,36 +42,67 @@ Formbuilder.comp.importer = Class.create({
 
 
     showPanel: function(){
+        if(typeof success != "function") {
+            var success = function () {  };
+        }
 
-        var uploadPanel = new Ext.ux.SwfUploadPanel({
-            border: false,
-            upload_url: '/plugin/Zendformbuilder/Settings/import/?pimcore_admin_sid=' + pimcore.settings.sessionId,
-            debug: false,
-            flash_url: "/pimcore/static/js/lib/ext-plugins/SwfUploadPanel/swfupload.swf",
-            single_select: false,
-            post_params: { id: this.importId },
-            file_queue_limit: 1,
-            single_file_select: true,
-            file_types: "*.json",
-            confirm_delete: false,
-            remove_completed: true,
-            listeners: {
-                "fileUploadComplete": function (upload, file) {
-                    this.getImport();
-                }.bind(this)
-            }
+        if(typeof failure != "function") {
+            var failure = function () {};
+        }
+
+        var url =   '/plugin/Zendformbuilder/Settings/import?id=' + this.importId + '&pimcore_admin_sid=' + pimcore.settings.sessionId;
+
+        var uploadWindowCompatible = new Ext.Window({
+            autoHeight: true,
+            title: t('Select Import'),
+            closeAction: 'close',
+            width:400,
+            modal: true
         });
-
-        this.uploadWin = new Ext.Window({
-            modal: true,
+        var fbClass = this;
+        var uploadForm = new Ext.form.FormPanel({
+            layout: "pimcoreform",
+            fileUpload: true,
             width: 400,
-            height: 140,
-            layout: "fit",
-            title: t("import"),
-            items: [uploadPanel]
+            bodyStyle: 'padding: 10px;',
+            items: [{
+                xtype: 'fileuploadfield',
+                emptyText: t("select_a_file"),
+                fieldLabel: t("Import File"),
+                width: 230,
+                name: 'Filedata',
+                buttonText: "",
+                buttonCfg: {
+                    iconCls: 'pimcore_icon_upload_single'
+
+                },
+                listeners: {
+                    fileselected: function () {
+                        uploadForm.getForm().submit({
+                            url: url,
+                            waitMsg: t("please_wait"),
+                            success: function (el, res) {
+
+                                fbClass.getImport();
+                                uploadWindowCompatible.close();
+                            },
+                            failure: function (el, res) {
+
+                                failure(res);
+                                uploadWindowCompatible.close();
+                            }
+                        });
+                    }
+                }
+            }]
         });
 
-        this.uploadWin.show();
+        uploadWindowCompatible.add(uploadForm);
+        uploadWindowCompatible.show();
+        uploadWindowCompatible.setWidth(401);
+        uploadWindowCompatible.doLayout();
+
+
 
     },
     getImport: function () {
@@ -87,7 +119,7 @@ Formbuilder.comp.importer = Class.create({
 
     getImportComplete: function (response) {
 
-        this.uploadWin.close();
+
 
          var data = Ext.decode(response.responseText);
 
