@@ -102,9 +102,9 @@ Formbuilder.comp.type.select = Class.create(Formbuilder.comp.type.base,{
         $super();
         if(this.datax.multiOptions){
             var values = new Array();
-        
+            
             for (var i=0;i<this.datax.multiOptions.length;i++){
-                values.push([this.datax.multiOptions[i]["key"],this.datax.multiOptions[i]["value"]]);
+                values.push([this.datax.multiOptions[i]["value"],this.datax.multiOptions[i]["value"]]);
             };
         
             var storeMulti = new Ext.data.ArrayStore({
