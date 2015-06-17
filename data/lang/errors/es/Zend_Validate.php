@@ -231,7 +231,7 @@ return array(
 
     // Zend_Validate_NotEmpty
     "Invalid type given, value should be float, string, array, boolean or integer" => "El tipo especificado es inválido, el valor deberí­a ser un float, una cadena de texto, un array, un boolean o un entero",
-    "Value is required and can't be empty" => "Se requiere un valor y éste no puede estar vací­o",
+    "Value is required and can't be empty" => "Campo obligatorio",
 
     // Zend_Validate_PostCode
     "Invalid type given. The value should be a string or a integer" => "El tipo especificado es incorrecto, el valor deberí­a ser una cadena de texto",

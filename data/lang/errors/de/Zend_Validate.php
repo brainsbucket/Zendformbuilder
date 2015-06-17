@@ -231,7 +231,7 @@ return array(
 
     // Zend_Validate_NotEmpty
     "Invalid type given. String, integer, float, boolean or array expected" => "Ungültiger Typ angegeben. String, Integer, Float, Boolean oder Array erwartet",
-    "Value is required and can't be empty" => "Es wird ein Wert benötigt. Dieser darf nicht leer sein",
+    "Value is required and can't be empty" => "Pflichtfeld",
 
     // Zend_Validate_PostCode
     "Invalid type given. String or integer expected" => "Ungültiger Typ angegeben. String oder Integer erwartet",
