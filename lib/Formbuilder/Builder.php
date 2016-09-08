@@ -89,6 +89,7 @@ class Formbuilder_Builder {
     }
 
     private function createForm() {
+
         $this->translate = array();
         $this->translateValidator = array();
 
@@ -136,7 +137,7 @@ class Formbuilder_Builder {
         foreach ($datas as $k => $v) {
 
             if (preg_match("#\.#", $k)) {
-                $temp = $preg_split("#\.#", $k);
+                $temp = preg_split("#\.#", $k);
                 if (!array_key_exists($temp[0], $ret)) {
                     $ret[$temp[0]] = array();
                 }
@@ -284,10 +285,12 @@ class Formbuilder_Builder {
                     if ($key != "name" && $key != "fieldtype") {
                         if ($data != "") {
                             $options[$key] = $data;
+
                         } elseif ($dataType == "boolean") {
                             $options[$key] = (bool) $data;
                         }
                     }
+
                     break;
             }
         }
@@ -500,7 +503,7 @@ class Formbuilder_Builder {
     }
 
     private function addValidatorTranslate($datas, $index) {
-        if (is_array($data["messages"])) {
+        if (is_array($datas["messages"])) {
             foreach ($datas["messages"] as $key) {
 
                 if ($datas["messages." . $key] != "") {

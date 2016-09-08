@@ -165,6 +165,18 @@ class Formbuilder_Frontend {
             } else {
                 $form = $this->getDynamicForm($id, $locale);
             }
+            //correctly set recaptcha to https if request is over https
+            if(Zend_Controller_Front::getInstance()->getRequest()->isSecure()){
+                /**@var Zend_Form $form */
+                $elements = $form->getElements();
+                foreach($elements as $element){
+                    if(get_class($element) == 'Zend_Form_Element_Captcha' ){
+                        /**@var  Zend_Form_Element_Captcha $element */
+                        $cap = $element->getCaptcha();
+                        $cap->getService()->setParams(array('ssl'=>true));
+                    }
+                }
+            }
 
             return $form;
         } else {
